@@ -9,15 +9,18 @@ attempts = 0
 
 start = time.time()
 
+#while loop to continue printing prime numbers as long as they are not in seen numbers
+#when number found in seen numbers loop will end 
 while True:
+    #generates random prime number with half bit specified bit length
     primes = getPrime(bitSize // 2)
     print(primes)
     attempts += 1
-
+    #check to see if new number has been added to seen numbers
     if primes in seenNumbers:
         print(f"Repeat Found {primes}")
         break
-
+    #adds numbers to seenNumbers
     seenNumbers.add(primes)
 
 
